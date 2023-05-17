@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jose Pedro Jacobo Torres">
+  <meta name="description" content="Examen bootstrap">
+  <meta name="keywords" content="Bootstrap, Bootstrap 5.3, framework, html, css, maquetación">
+  <title>Bootstrap trabajo Miyazaki</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nova+Cut&display=swap" rel="stylesheet">
+</head>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="biografia.html">Biografía</a></li>
+      <li><a href="trabajos.html">Trabajos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+    </ul>
+  </nav>
+</header>
+<!--Aquí comienza el body-->
+<body>
+  <div class="container principal">
+    <div class="sub-1" style="text-align: center;">
+      <img id="miImagen" src="img/img1.png" alt="Descripción de la imagen" style="max-width: 100%; max-height: 100%;">
+      <h1 class="image-text">Hidetaka Miyazaki</h1>
+    </div>
+    <div class="row">
+      <div class="box-blink">
+        <button onclick="apagarPagina()" id="cambiar-fondo"> <a href="trabajos.html"> Presiona aquí para comenzar</a></button>
+        <audio id="audio" src="img/y2mate.com - Fuego Dark Souls  Efecto de sonido  Sound effect.mp3"></audio>
+        <script>
+          function apagarPagina() {
+            document.body.classList.add('apagado');
+            setTimeout(function() {
+              document.body.classList.remove('apagado');
+            }, 1000);
+            setTimeout(function() {
+              document.body.classList.add('parpadeo');
+              setTimeout(function() {
+                document.body.classList.remove('parpadeo');
+              }, 2000);
+            }, 2000);
+          }
+          function playAudio() {
+            var audio = document.getElementById("audio");
+            audio.play();
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+  <style>
+    body {
+      background-color: #0D2624;
+      transition: background-color 0.5s ease-in-out;
+    }
+    .apagado {
+      background-color: #000;
+    }
+    .parpadeo {
+      animation: parpadear 0.5s infinite;
+    }
+    @keyframes parpadear {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      transition: background-color 0.2s ease-in-out;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+  </div>
+</div>
+<footer>
+  <div class="social-media">
+    <h4>Social Media</h4>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </div>
+  <div class="correo">
+    <h4>Correo</h4>
+    <p>info@example.com</p>
+  </div>
+  <div class="contrato">
+    <h4>Contrato</h4>
+    <ul>
+      <li><a href="#">Términos de servicio</a></li>
+      <li><a href="#">Política de privacidad</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
